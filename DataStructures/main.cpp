@@ -1,4 +1,4 @@
-#include "Tests/stacktest.hpp"
+#include "Tests/stack_test.hpp"
 
 int main()
 {

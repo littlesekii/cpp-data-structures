@@ -1,8 +1,8 @@
-#include "stacktest.hpp"
+#include "stack_test.hpp"
 
 #include <iostream>
 #include <stdexcept>
-#include "../Linear/Stack/stack.hpp"
+#include "../Linear/Stack/static_stack.hpp"
 
 void StackTest::staticStackTest()
 {
@@ -39,6 +39,8 @@ void StackTest::staticStackTest()
 			std::cout << e.what() << '\n';
 		}
 	}
+
+	delete stack;
 }
 
 void StackTest::showStaticStackProperties(StaticStack<int>* stack) {

@@ -127,13 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Linear\Stack\stack.hpp" />
-    <ClInclude Include="Linear\Stack\stackexception.hpp" />
-    <ClInclude Include="Tests\stacktest.hpp" />
+    <ClInclude Include="Linear\Queue\static_queue.hpp" />
+    <ClInclude Include="Linear\Stack\static_stack.hpp" />
+    <ClInclude Include="Linear\Stack\stack_exception.hpp" />
+    <ClInclude Include="Tests\stack_test.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Tests\stacktest.cpp" />
+    <ClCompile Include="Tests\stack_test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

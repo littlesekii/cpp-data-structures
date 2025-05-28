@@ -2,7 +2,7 @@
 #define STACK_HPP
 
 #include <optional>
-#include "stackexception.hpp"
+#include "stack_exception.hpp"
 
 template <typename type>
 class StaticStack
