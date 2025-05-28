@@ -49,8 +49,6 @@ StaticStack<type>::StaticStack(size_t capacity)
 template <typename type>
 StaticStack<type>::~StaticStack()
 {
-	maxSize = 0;
-	currentSize = 0;
 	delete[] items;
 }
 
@@ -73,7 +71,7 @@ type StaticStack<type>::pop()
 }
 
 template<typename type>
-inline type StaticStack<type>::peek()
+type StaticStack<type>::peek()
 {
 	if (isEmpty())
 		throw StackUnderflowException("Stack is empty");
