@@ -15,18 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Linear\Stack\stackexception.hpp">
+    <ClInclude Include="Linear\Stack\stack_exception.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Linear\Stack\stack.hpp">
+    <ClInclude Include="Linear\Stack\static_stack.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Tests\stacktest.hpp">
+    <ClInclude Include="Tests\stack_test.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Linear\Queue\static_queue.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tests\stacktest.cpp">
+    <ClCompile Include="Tests\stack_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">

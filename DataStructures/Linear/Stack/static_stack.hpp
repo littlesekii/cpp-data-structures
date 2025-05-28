@@ -1,8 +1,8 @@
-#ifndef STACK_HPP
-#define STACK_HPP
+#ifndef STATIC_STACK_HPP
+#define STATIC_STACK_HPP
 
 #include <optional>
-#include "stackexception.hpp"
+#include "stack_exception.hpp"
 
 template <typename type>
 class StaticStack
@@ -93,4 +93,4 @@ bool StaticStack<type>::isEmpty() { return currentSize == 0; }
 template <typename type>
 bool StaticStack<type>::isFull() { return currentSize == maxSize; }
 
-#endif // !STACK_HPP
+#endif // !STATIC_STACK_HPP
