@@ -27,12 +27,21 @@
     <ClInclude Include="Linear\Queue\static_queue.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Linear\Queue\queue_exception.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\queue_test.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tests\stack_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\queue_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
