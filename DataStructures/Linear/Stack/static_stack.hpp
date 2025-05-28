@@ -16,12 +16,12 @@ public:
 
 	void push(type item);
 	type pop();
-	type peek();
+	type peek() const;
 
-	size_t size();
-	size_t capacity();
-	bool isEmpty();
-	bool isFull();
+	size_t size() const;
+	size_t capacity() const;
+	bool isEmpty() const;
+	bool isFull() const;
 
 private:
 	type* items;
@@ -31,20 +31,18 @@ private:
 };
 
 template <typename type>
-StaticStack<type>::StaticStack()
-{
-	maxSize = 100;
-	currentSize = 0;
-	items = new type[maxSize];
-}
+StaticStack<type>::StaticStack(): 
+	maxSize(100), 
+	currentSize(0), 
+	items(new type[maxSize]) 
+{}
 
 template <typename type>
-StaticStack<type>::StaticStack(size_t capacity)
-{
-	this->maxSize = capacity;
-	currentSize = 0;
-	items = new type[this->maxSize];
-}
+StaticStack<type>::StaticStack(size_t capacity): 
+	maxSize(capacity > 0 ? capacity : throw std::invalid_argument("Capacity must be > 0")),
+	currentSize(0), 
+	items(new type[capacity]) 
+{}
 
 template <typename type>
 StaticStack<type>::~StaticStack()
@@ -71,7 +69,7 @@ type StaticStack<type>::pop()
 }
 
 template<typename type>
-type StaticStack<type>::peek()
+type StaticStack<type>::peek() const
 {
 	if (isEmpty())
 		throw StackUnderflowException("Stack is empty");
@@ -80,15 +78,15 @@ type StaticStack<type>::peek()
 }
 
 template <typename type>
-size_t StaticStack<type>::size() { return currentSize; }
+size_t StaticStack<type>::size() const { return currentSize; }
 
 template <typename type>
-size_t StaticStack<type>::capacity() { return maxSize; }
+size_t StaticStack<type>::capacity() const { return maxSize; }
 
 template <typename type>
-bool StaticStack<type>::isEmpty() { return currentSize == 0; }
+bool StaticStack<type>::isEmpty() const { return currentSize == 0; }
 
 template <typename type>
-bool StaticStack<type>::isFull() { return currentSize == maxSize; }
+bool StaticStack<type>::isFull() const { return currentSize == maxSize; }
 
 #endif // !STATIC_STACK_HPP

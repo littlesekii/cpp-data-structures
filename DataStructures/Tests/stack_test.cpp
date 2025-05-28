@@ -30,7 +30,7 @@ void StackTest::staticStackTest()
 
 	showStaticStackProperties(stack);
 
-	std::cout << "Emptying stack..\n";
+	std::cout << "Emptying stack...\n";
 	while (!stack->isEmpty()) {
 		try {
 			std::cout << stack->pop() << '\n';

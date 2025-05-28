@@ -16,12 +16,12 @@ public:
 
 	void push(type item);
 	type shift();
-	type peek();
+	type peek() const;
 
-	size_t size();
-	size_t capacity();
-	bool isEmpty();
-	bool isFull();
+	size_t size() const;
+	size_t capacity() const;
+	bool isEmpty() const;
+	bool isFull() const;
 
 private:
 	type* items;
@@ -31,20 +31,18 @@ private:
 };
 
 template <typename type>
-StaticQueue<type>::StaticQueue()
-{
-	maxSize = 100;
-	currentSize = 0;
-	items = new type[maxSize];
-}
+StaticQueue<type>::StaticQueue(): 
+	maxSize(100), 
+	currentSize(0), 
+	items(new type[maxSize]) 
+{}
 
 template <typename type>
-StaticQueue<type>::StaticQueue(size_t capacity)
-{
-	this->maxSize = capacity;
-	currentSize = 0;
-	items = new type[this->maxSize];
-}
+StaticQueue<type>::StaticQueue(size_t capacity) :
+	maxSize(capacity > 0 ? capacity : throw std::invalid_argument("Capacity must be > 0")),
+	currentSize(0),
+	items(new type[capacity])
+{}
 
 template <typename type>
 StaticQueue<type>::~StaticQueue()
@@ -80,7 +78,7 @@ type StaticQueue<type>::shift()
 }
 
 template<typename type>
-type StaticQueue<type>::peek()
+type StaticQueue<type>::peek() const
 {
 	if (isEmpty())
 		throw QueueUnderflowException("Queue is empty");
@@ -89,15 +87,15 @@ type StaticQueue<type>::peek()
 }
 
 template <typename type>
-size_t StaticQueue<type>::size() { return currentSize; }
+size_t StaticQueue<type>::size() const { return currentSize; }
 
 template <typename type>
-size_t StaticQueue<type>::capacity() { return maxSize; }
+size_t StaticQueue<type>::capacity() const { return maxSize; }
 
 template <typename type>
-bool StaticQueue<type>::isEmpty() { return currentSize == 0; }
+bool StaticQueue<type>::isEmpty() const { return currentSize == 0; }
 
 template <typename type>
-bool StaticQueue<type>::isFull() { return currentSize == maxSize; }
+bool StaticQueue<type>::isFull() const { return currentSize == maxSize; }
 
 #endif // !STATIC_QUEUE_HPP

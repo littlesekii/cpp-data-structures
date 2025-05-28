@@ -30,7 +30,7 @@ void QueueTest::staticQueueTest()
 
 	showStaticQueueProperties(queue);
 
-	std::cout << "Emptying queue..\n";
+	std::cout << "Emptying queue...\n";
 	while (!queue->isEmpty()) {
 		try {
 			std::cout << queue->shift() << '\n';
