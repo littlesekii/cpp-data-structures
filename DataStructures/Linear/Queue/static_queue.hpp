@@ -1,5 +1,5 @@
-#ifndef QUEUE_HPP
-#define QUEUE_HPP
+#ifndef STATIC_QUEUE_HPP
+#define STATIC_QUEUE_HPP
 
 #include <optional>
 #include "queue_exception.hpp"
