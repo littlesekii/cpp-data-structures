@@ -33,6 +33,12 @@
     <ClInclude Include="Tests\queue_test.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Linear\Queue\static_circular_queue.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Linear\Queue\i_queue.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tests\stack_test.cpp">

@@ -3,9 +3,10 @@
 
 #include <optional>
 #include "queue_exception.hpp"
+#include "i_queue.hpp"
 
 template <typename type>
-class StaticQueue
+class StaticQueue : public IQueue<type>
 {
 public:
 

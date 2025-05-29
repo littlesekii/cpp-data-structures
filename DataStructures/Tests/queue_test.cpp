@@ -2,7 +2,9 @@
 
 #include <iostream>
 #include <stdexcept>
+
 #include "../Linear/Queue/static_queue.hpp"
+#include "../Linear/Queue/static_circular_queue.hpp"
 
 void QueueTest::staticQueueTest()
 {
@@ -10,7 +12,7 @@ void QueueTest::staticQueueTest()
 
 	StaticQueue<int>* queue = new StaticQueue<int>(MAX_CAP);
 
-	showStaticQueueProperties(queue);
+	showQueueProperties(queue);
 
 	std::cout << "Filling queue...\n";
 	int i = 0;
@@ -28,7 +30,7 @@ void QueueTest::staticQueueTest()
 
 	std::cout << "----------------------------\n";
 
-	showStaticQueueProperties(queue);
+	showQueueProperties(queue);
 
 	std::cout << "Emptying queue...\n";
 	while (!queue->isEmpty()) {
@@ -42,8 +44,54 @@ void QueueTest::staticQueueTest()
 
 	delete queue;
 }
+/// <summary>
+/// 
+/// </summary>
 
-void QueueTest::showStaticQueueProperties(StaticQueue<int>* queue) {
+void QueueTest::staticCircularQueueTest()
+{
+	const size_t MAX_CAP = 5;
+
+	StaticCircularQueue<int>* queue = new StaticCircularQueue<int>(MAX_CAP);
+
+	showQueueProperties(queue);
+
+	std::cout << "Filling queue...\n";
+	int i = 0;
+	while (!queue->isFull())
+	{
+		try {
+			queue->push(++i);
+			std::cout << i << '\n';
+
+			if (i == 4 || i == 2) {
+				std::cout << "VALUE \"" << queue->shift() << "\" REMOVED\n";
+			}
+		}
+		catch (QueueOverflowException e) {
+			std::cout << e.what() << '\n';
+		}
+
+	}
+
+	std::cout << "----------------------------\n";
+
+	showQueueProperties(queue);
+
+	std::cout << "Emptying queue...\n";
+	while (!queue->isEmpty()) {
+		try {
+			std::cout << queue->shift() << '\n';	
+		}
+		catch (QueueUnderflowException e) {
+			std::cout << e.what() << '\n';
+		}
+	}
+
+	delete queue;
+}
+
+void QueueTest::showQueueProperties(IQueue<int>* queue) {
 
 	if (queue->isEmpty())
 		std::cout << "Queue is empty!\n";
