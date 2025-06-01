@@ -10,6 +10,8 @@ public:
 	static void staticQueueTest();
 	static void staticCircularQueueTest();
 
+	static void queuesPerformanceTest();
+
 private:
 	static void showQueueProperties(IQueue<int>* queue);
 };

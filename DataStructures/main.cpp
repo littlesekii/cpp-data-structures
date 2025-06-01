@@ -5,6 +5,7 @@ int main()
 {
 	//StackTest::staticStackTest();
 	//QueueTest::staticQueueTest();
-	QueueTest::staticCircularQueueTest();
+	//QueueTest::staticCircularQueueTest();
+	QueueTest::queuesPerformanceTest();
 	return 0;
 }
