@@ -39,6 +39,15 @@
     <ClInclude Include="Linear\Queue\i_queue.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Linear\LinkedList\linked_list.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Linear\LinkedList\linked_list_exception.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\linked_list_test.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tests\stack_test.cpp">
@@ -48,6 +57,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Tests\queue_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\linked_list_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

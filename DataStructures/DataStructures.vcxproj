@@ -127,17 +127,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Linear\LinkedList\linked_list.hpp" />
+    <ClInclude Include="Linear\LinkedList\linked_list_exception.hpp" />
     <ClInclude Include="Linear\Queue\i_queue.hpp" />
     <ClInclude Include="Linear\Queue\queue_exception.hpp" />
     <ClInclude Include="Linear\Queue\static_circular_queue.hpp" />
     <ClInclude Include="Linear\Queue\static_queue.hpp" />
     <ClInclude Include="Linear\Stack\static_stack.hpp" />
     <ClInclude Include="Linear\Stack\stack_exception.hpp" />
+    <ClInclude Include="Tests\linked_list_test.hpp" />
     <ClInclude Include="Tests\queue_test.hpp" />
     <ClInclude Include="Tests\stack_test.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Tests\linked_list_test.cpp" />
     <ClCompile Include="Tests\queue_test.cpp" />
     <ClCompile Include="Tests\stack_test.cpp" />
   </ItemGroup>
